@@ -167,7 +167,7 @@ class Message(olefile.OleFileIO):
         Returns a list of all attachments.
         """
         try:
-            return self._attachments
+            return self.attachments
         except AttributeError:
             # Get the attachments
             attachmentDirs = []
