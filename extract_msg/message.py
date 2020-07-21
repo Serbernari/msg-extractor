@@ -284,7 +284,7 @@ class Message(MSGFile):
         Returns a list of all attachments.
         """
         try:
-            return self._attachments
+            return self.attachments
         except AttributeError:
             # Get the attachments
             attachmentDirs = []
@@ -299,7 +299,7 @@ class Message(MSGFile):
             for attachmentDir in attachmentDirs:
                 self._attachments.append(self.attachmentClass(self, attachmentDir))
 
-            return self._attachments
+            return self.attachments
 
     @property
     def body(self):
