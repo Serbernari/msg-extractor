@@ -294,7 +294,7 @@ class Message(MSGFile):
                         dir_[len(self.prefixList)] not in attachmentDirs:
                     attachmentDirs.append(dir_[len(self.prefixList)])
 
-            self._attachments = []
+            self.attachments = []
 
             for attachmentDir in attachmentDirs:
                 self._attachments.append(self.attachmentClass(self, attachmentDir))
